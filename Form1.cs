@@ -36,5 +36,25 @@ namespace WinFormsApp2
         {
 
         }
+
+        private void txtCustomer_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCompute_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPumpNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
