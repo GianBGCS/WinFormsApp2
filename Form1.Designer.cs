@@ -67,6 +67,10 @@
             txtGrossAmount = new TextBox();
             lblGrossAmount = new Label();
             txtVolDiscount = new TextBox();
+            btnCompute = new Button();
+            btnClear = new Button();
+            btnReport = new Button();
+            btnExit = new Button();
             SuspendLayout();
             // 
             // lblTitle
@@ -81,7 +85,7 @@
             // lblPumpNo
             // 
             lblPumpNo.AutoSize = true;
-            lblPumpNo.Location = new Point(12, 35);
+            lblPumpNo.Location = new Point(12, 38);
             lblPumpNo.Name = "lblPumpNo";
             lblPumpNo.Size = new Size(105, 20);
             lblPumpNo.TabIndex = 1;
@@ -97,7 +101,7 @@
             // 
             // txtCustomer
             // 
-            txtCustomer.Location = new Point(130, 73);
+            txtCustomer.Location = new Point(130, 68);
             txtCustomer.Name = "txtCustomer";
             txtCustomer.Size = new Size(181, 27);
             txtCustomer.TabIndex = 4;
@@ -105,7 +109,7 @@
             // lblCustomer
             // 
             lblCustomer.AutoSize = true;
-            lblCustomer.Location = new Point(12, 77);
+            lblCustomer.Location = new Point(12, 71);
             lblCustomer.Name = "lblCustomer";
             lblCustomer.Size = new Size(116, 20);
             lblCustomer.TabIndex = 3;
@@ -114,7 +118,7 @@
             // 
             // txtPlateNo
             // 
-            txtPlateNo.Location = new Point(130, 125);
+            txtPlateNo.Location = new Point(130, 101);
             txtPlateNo.Name = "txtPlateNo";
             txtPlateNo.Size = new Size(181, 27);
             txtPlateNo.TabIndex = 6;
@@ -122,7 +126,7 @@
             // lblPlateNo
             // 
             lblPlateNo.AutoSize = true;
-            lblPlateNo.Location = new Point(12, 128);
+            lblPlateNo.Location = new Point(12, 104);
             lblPlateNo.Name = "lblPlateNo";
             lblPlateNo.Size = new Size(100, 20);
             lblPlateNo.TabIndex = 5;
@@ -131,7 +135,7 @@
             // 
             // txtFuelType
             // 
-            txtFuelType.Location = new Point(130, 180);
+            txtFuelType.Location = new Point(130, 134);
             txtFuelType.Name = "txtFuelType";
             txtFuelType.Size = new Size(181, 27);
             txtFuelType.TabIndex = 8;
@@ -139,7 +143,7 @@
             // lblFuelType
             // 
             lblFuelType.AutoSize = true;
-            lblFuelType.Location = new Point(12, 183);
+            lblFuelType.Location = new Point(12, 138);
             lblFuelType.Name = "lblFuelType";
             lblFuelType.Size = new Size(94, 20);
             lblFuelType.TabIndex = 7;
@@ -147,7 +151,7 @@
             // 
             // txtFuelLevel
             // 
-            txtFuelLevel.Location = new Point(550, 176);
+            txtFuelLevel.Location = new Point(509, 131);
             txtFuelLevel.Name = "txtFuelLevel";
             txtFuelLevel.Size = new Size(181, 27);
             txtFuelLevel.TabIndex = 16;
@@ -155,7 +159,7 @@
             // lblFuelLevel
             // 
             lblFuelLevel.AutoSize = true;
-            lblFuelLevel.Location = new Point(384, 183);
+            lblFuelLevel.Location = new Point(343, 131);
             lblFuelLevel.Name = "lblFuelLevel";
             lblFuelLevel.Size = new Size(147, 20);
             lblFuelLevel.TabIndex = 15;
@@ -163,7 +167,7 @@
             // 
             // txtTankCapacity
             // 
-            txtTankCapacity.Location = new Point(550, 125);
+            txtTankCapacity.Location = new Point(509, 98);
             txtTankCapacity.Name = "txtTankCapacity";
             txtTankCapacity.Size = new Size(181, 27);
             txtTankCapacity.TabIndex = 14;
@@ -171,7 +175,7 @@
             // lblTankCapacity
             // 
             lblTankCapacity.AutoSize = true;
-            lblTankCapacity.Location = new Point(384, 128);
+            lblTankCapacity.Location = new Point(345, 98);
             lblTankCapacity.Name = "lblTankCapacity";
             lblTankCapacity.Size = new Size(120, 20);
             lblTankCapacity.TabIndex = 13;
@@ -179,7 +183,7 @@
             // 
             // txtPricePerLiters
             // 
-            txtPricePerLiters.Location = new Point(550, 74);
+            txtPricePerLiters.Location = new Point(509, 65);
             txtPricePerLiters.Name = "txtPricePerLiters";
             txtPricePerLiters.Size = new Size(181, 27);
             txtPricePerLiters.TabIndex = 12;
@@ -187,7 +191,7 @@
             // lblPricePerLiter
             // 
             lblPricePerLiter.AutoSize = true;
-            lblPricePerLiter.Location = new Point(384, 77);
+            lblPricePerLiter.Location = new Point(345, 65);
             lblPricePerLiter.Name = "lblPricePerLiter";
             lblPricePerLiter.Size = new Size(100, 20);
             lblPricePerLiter.TabIndex = 11;
@@ -196,7 +200,7 @@
             // 
             // txtLiters
             // 
-            txtLiters.Location = new Point(550, 32);
+            txtLiters.Location = new Point(509, 32);
             txtLiters.Name = "txtLiters";
             txtLiters.Size = new Size(181, 27);
             txtLiters.TabIndex = 10;
@@ -205,7 +209,7 @@
             // lblLiters
             // 
             lblLiters.AutoSize = true;
-            lblLiters.Location = new Point(384, 35);
+            lblLiters.Location = new Point(345, 35);
             lblLiters.Name = "lblLiters";
             lblLiters.Size = new Size(118, 20);
             lblLiters.TabIndex = 9;
@@ -213,7 +217,7 @@
             // 
             // txtCashTendered
             // 
-            txtCashTendered.Location = new Point(550, 273);
+            txtCashTendered.Location = new Point(509, 197);
             txtCashTendered.Name = "txtCashTendered";
             txtCashTendered.Size = new Size(181, 27);
             txtCashTendered.TabIndex = 24;
@@ -221,7 +225,7 @@
             // lblCashTendered
             // 
             lblCashTendered.AutoSize = true;
-            lblCashTendered.Location = new Point(384, 276);
+            lblCashTendered.Location = new Point(345, 200);
             lblCashTendered.Name = "lblCashTendered";
             lblCashTendered.Size = new Size(106, 20);
             lblCashTendered.TabIndex = 23;
@@ -229,7 +233,7 @@
             // 
             // txtLoyaltyPoints
             // 
-            txtLoyaltyPoints.Location = new Point(550, 218);
+            txtLoyaltyPoints.Location = new Point(509, 164);
             txtLoyaltyPoints.Name = "txtLoyaltyPoints";
             txtLoyaltyPoints.Size = new Size(181, 27);
             txtLoyaltyPoints.TabIndex = 22;
@@ -237,7 +241,7 @@
             // lblLoyaltyPoints
             // 
             lblLoyaltyPoints.AutoSize = true;
-            lblLoyaltyPoints.Location = new Point(382, 221);
+            lblLoyaltyPoints.Location = new Point(345, 167);
             lblLoyaltyPoints.Name = "lblLoyaltyPoints";
             lblLoyaltyPoints.Size = new Size(99, 20);
             lblLoyaltyPoints.TabIndex = 21;
@@ -246,7 +250,7 @@
             // lblTankSpace
             // 
             lblTankSpace.AutoSize = true;
-            lblTankSpace.Location = new Point(759, 35);
+            lblTankSpace.Location = new Point(728, 38);
             lblTankSpace.Name = "lblTankSpace";
             lblTankSpace.Size = new Size(148, 20);
             lblTankSpace.TabIndex = 27;
@@ -256,7 +260,7 @@
             // lblVolDiscount
             // 
             lblVolDiscount.AutoSize = true;
-            lblVolDiscount.Location = new Point(772, 128);
+            lblVolDiscount.Location = new Point(728, 101);
             lblVolDiscount.Name = "lblVolDiscount";
             lblVolDiscount.Size = new Size(121, 20);
             lblVolDiscount.TabIndex = 28;
@@ -265,7 +269,7 @@
             // lblChange
             // 
             lblChange.AutoSize = true;
-            lblChange.Location = new Point(834, 358);
+            lblChange.Location = new Point(728, 236);
             lblChange.Name = "lblChange";
             lblChange.Size = new Size(59, 20);
             lblChange.TabIndex = 29;
@@ -275,7 +279,7 @@
             // lblVatAmount
             // 
             lblVatAmount.AutoSize = true;
-            lblVatAmount.Location = new Point(798, 290);
+            lblVatAmount.Location = new Point(728, 203);
             lblVatAmount.Name = "lblVatAmount";
             lblVatAmount.Size = new Size(95, 20);
             lblVatAmount.TabIndex = 30;
@@ -284,7 +288,7 @@
             // lblNetAmount
             // 
             lblNetAmount.AutoSize = true;
-            lblNetAmount.Location = new Point(772, 238);
+            lblNetAmount.Location = new Point(725, 170);
             lblNetAmount.Name = "lblNetAmount";
             lblNetAmount.Size = new Size(121, 20);
             lblNetAmount.TabIndex = 31;
@@ -293,7 +297,7 @@
             // lblLoyaltyDiscount
             // 
             lblLoyaltyDiscount.AutoSize = true;
-            lblLoyaltyDiscount.Location = new Point(775, 183);
+            lblLoyaltyDiscount.Location = new Point(728, 137);
             lblLoyaltyDiscount.Name = "lblLoyaltyDiscount";
             lblLoyaltyDiscount.Size = new Size(118, 20);
             lblLoyaltyDiscount.TabIndex = 32;
@@ -302,7 +306,7 @@
             // lblPointsEarned
             // 
             lblPointsEarned.AutoSize = true;
-            lblPointsEarned.Location = new Point(795, 417);
+            lblPointsEarned.Location = new Point(725, 269);
             lblPointsEarned.Name = "lblPointsEarned";
             lblPointsEarned.Size = new Size(98, 20);
             lblPointsEarned.TabIndex = 33;
@@ -312,7 +316,7 @@
             // lblTankStatus
             // 
             lblTankStatus.AutoSize = true;
-            lblTankStatus.Location = new Point(728, 470);
+            lblTankStatus.Location = new Point(725, 303);
             lblTankStatus.Name = "lblTankStatus";
             lblTankStatus.Size = new Size(165, 20);
             lblTankStatus.TabIndex = 34;
@@ -320,42 +324,42 @@
             // 
             // txtLoyaltyDiscount
             // 
-            txtLoyaltyDiscount.Location = new Point(913, 176);
+            txtLoyaltyDiscount.Location = new Point(913, 131);
             txtLoyaltyDiscount.Name = "txtLoyaltyDiscount";
             txtLoyaltyDiscount.Size = new Size(181, 27);
             txtLoyaltyDiscount.TabIndex = 35;
             // 
             // txtNetAmount
             // 
-            txtNetAmount.Location = new Point(913, 231);
+            txtNetAmount.Location = new Point(913, 164);
             txtNetAmount.Name = "txtNetAmount";
             txtNetAmount.Size = new Size(181, 27);
             txtNetAmount.TabIndex = 36;
             // 
             // txtVatAmount
             // 
-            txtVatAmount.Location = new Point(913, 287);
+            txtVatAmount.Location = new Point(913, 197);
             txtVatAmount.Name = "txtVatAmount";
             txtVatAmount.Size = new Size(181, 27);
             txtVatAmount.TabIndex = 37;
             // 
             // txtChange
             // 
-            txtChange.Location = new Point(913, 351);
+            txtChange.Location = new Point(913, 230);
             txtChange.Name = "txtChange";
             txtChange.Size = new Size(181, 27);
             txtChange.TabIndex = 38;
             // 
             // txtPointsEarned
             // 
-            txtPointsEarned.Location = new Point(913, 410);
+            txtPointsEarned.Location = new Point(913, 263);
             txtPointsEarned.Name = "txtPointsEarned";
             txtPointsEarned.Size = new Size(181, 27);
             txtPointsEarned.TabIndex = 39;
             // 
             // txtTankStatus
             // 
-            txtTankStatus.Location = new Point(913, 470);
+            txtTankStatus.Location = new Point(913, 296);
             txtTankStatus.Name = "txtTankStatus";
             txtTankStatus.Size = new Size(181, 27);
             txtTankStatus.TabIndex = 40;
@@ -369,7 +373,7 @@
             // 
             // txtGrossAmount
             // 
-            txtGrossAmount.Location = new Point(913, 74);
+            txtGrossAmount.Location = new Point(913, 65);
             txtGrossAmount.Name = "txtGrossAmount";
             txtGrossAmount.Size = new Size(181, 27);
             txtGrossAmount.TabIndex = 44;
@@ -377,7 +381,7 @@
             // lblGrossAmount
             // 
             lblGrossAmount.AutoSize = true;
-            lblGrossAmount.Location = new Point(799, 77);
+            lblGrossAmount.Location = new Point(728, 71);
             lblGrossAmount.Name = "lblGrossAmount";
             lblGrossAmount.Size = new Size(102, 20);
             lblGrossAmount.TabIndex = 45;
@@ -385,16 +389,60 @@
             // 
             // txtVolDiscount
             // 
-            txtVolDiscount.Location = new Point(913, 125);
+            txtVolDiscount.Location = new Point(913, 98);
             txtVolDiscount.Name = "txtVolDiscount";
             txtVolDiscount.Size = new Size(181, 27);
             txtVolDiscount.TabIndex = 46;
+            // 
+            // btnCompute
+            // 
+            btnCompute.Location = new Point(423, 411);
+            btnCompute.Name = "btnCompute";
+            btnCompute.Size = new Size(287, 29);
+            btnCompute.TabIndex = 47;
+            btnCompute.Text = "Compute";
+            btnCompute.UseVisualStyleBackColor = true;
+            btnCompute.Click += btnCompute_Click;
+            // 
+            // btnClear
+            // 
+            btnClear.Location = new Point(423, 446);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(287, 29);
+            btnClear.TabIndex = 48;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += btnClear_Click;
+            // 
+            // btnReport
+            // 
+            btnReport.Location = new Point(423, 481);
+            btnReport.Name = "btnReport";
+            btnReport.Size = new Size(287, 29);
+            btnReport.TabIndex = 49;
+            btnReport.Text = "View Receipt";
+            btnReport.UseVisualStyleBackColor = true;
+            btnReport.Click += btnReport_Click;
+            // 
+            // btnExit
+            // 
+            btnExit.Location = new Point(423, 516);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(287, 29);
+            btnExit.TabIndex = 50;
+            btnExit.Text = "Exit";
+            btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1712, 757);
+            ClientSize = new Size(1131, 576);
+            Controls.Add(btnExit);
+            Controls.Add(btnReport);
+            Controls.Add(btnClear);
+            Controls.Add(btnCompute);
             Controls.Add(txtVolDiscount);
             Controls.Add(lblGrossAmount);
             Controls.Add(txtGrossAmount);
@@ -492,5 +540,9 @@
         private Label lblPointsEarned;
 
         private Label lblTankStatus;
+        private Button btnCompute;
+        private Button btnClear;
+        private Button btnReport;
+        private Button btnExit;
     }
 }
