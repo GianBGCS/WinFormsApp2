@@ -49,6 +49,24 @@
             lblCashTendered = new Label();
             txtLoyaltyPoints = new TextBox();
             lblLoyaltyPoints = new Label();
+            lblTankSpace = new Label();
+            lblVolDiscount = new Label();
+            lblChange = new Label();
+            lblVatAmount = new Label();
+            lblNetAmount = new Label();
+            lblLoyaltyDiscount = new Label();
+            lblPointsEarned = new Label();
+            lblTankStatus = new Label();
+            txtLoyaltyDiscount = new TextBox();
+            txtNetAmount = new TextBox();
+            txtVatAmount = new TextBox();
+            txtChange = new TextBox();
+            txtPointsEarned = new TextBox();
+            txtTankStatus = new TextBox();
+            txtTankSpace = new TextBox();
+            txtGrossAmount = new TextBox();
+            lblGrossAmount = new Label();
+            txtVolDiscount = new TextBox();
             SuspendLayout();
             // 
             // lblTitle
@@ -225,11 +243,176 @@
             lblLoyaltyPoints.TabIndex = 21;
             lblLoyaltyPoints.Text = "Loyalty Points";
             // 
+            // lblTankSpace
+            // 
+            lblTankSpace.AutoSize = true;
+            lblTankSpace.Location = new Point(759, 35);
+            lblTankSpace.Name = "lblTankSpace";
+            lblTankSpace.Size = new Size(148, 20);
+            lblTankSpace.TabIndex = 27;
+            lblTankSpace.Text = "Available Tank Space";
+            lblTankSpace.Click += label1_Click_1;
+            // 
+            // lblVolDiscount
+            // 
+            lblVolDiscount.AutoSize = true;
+            lblVolDiscount.Location = new Point(772, 128);
+            lblVolDiscount.Name = "lblVolDiscount";
+            lblVolDiscount.Size = new Size(121, 20);
+            lblVolDiscount.TabIndex = 28;
+            lblVolDiscount.Text = "Volume Discount";
+            // 
+            // lblChange
+            // 
+            lblChange.AutoSize = true;
+            lblChange.Location = new Point(834, 358);
+            lblChange.Name = "lblChange";
+            lblChange.Size = new Size(59, 20);
+            lblChange.TabIndex = 29;
+            lblChange.Text = "Change";
+            lblChange.Click += label3_Click_2;
+            // 
+            // lblVatAmount
+            // 
+            lblVatAmount.AutoSize = true;
+            lblVatAmount.Location = new Point(798, 290);
+            lblVatAmount.Name = "lblVatAmount";
+            lblVatAmount.Size = new Size(95, 20);
+            lblVatAmount.TabIndex = 30;
+            lblVatAmount.Text = "VAT Included";
+            // 
+            // lblNetAmount
+            // 
+            lblNetAmount.AutoSize = true;
+            lblNetAmount.Location = new Point(772, 238);
+            lblNetAmount.Name = "lblNetAmount";
+            lblNetAmount.Size = new Size(121, 20);
+            lblNetAmount.TabIndex = 31;
+            lblNetAmount.Text = "Net Amount Due";
+            // 
+            // lblLoyaltyDiscount
+            // 
+            lblLoyaltyDiscount.AutoSize = true;
+            lblLoyaltyDiscount.Location = new Point(775, 183);
+            lblLoyaltyDiscount.Name = "lblLoyaltyDiscount";
+            lblLoyaltyDiscount.Size = new Size(118, 20);
+            lblLoyaltyDiscount.TabIndex = 32;
+            lblLoyaltyDiscount.Text = "Loyalty Discount";
+            // 
+            // lblPointsEarned
+            // 
+            lblPointsEarned.AutoSize = true;
+            lblPointsEarned.Location = new Point(795, 417);
+            lblPointsEarned.Name = "lblPointsEarned";
+            lblPointsEarned.Size = new Size(98, 20);
+            lblPointsEarned.TabIndex = 33;
+            lblPointsEarned.Text = "Points Earned";
+            lblPointsEarned.Click += label7_Click;
+            // 
+            // lblTankStatus
+            // 
+            lblTankStatus.AutoSize = true;
+            lblTankStatus.Location = new Point(728, 470);
+            lblTankStatus.Name = "lblTankStatus";
+            lblTankStatus.Size = new Size(165, 20);
+            lblTankStatus.TabIndex = 34;
+            lblTankStatus.Text = "Tank Status After Refuel";
+            // 
+            // txtLoyaltyDiscount
+            // 
+            txtLoyaltyDiscount.Location = new Point(913, 176);
+            txtLoyaltyDiscount.Name = "txtLoyaltyDiscount";
+            txtLoyaltyDiscount.Size = new Size(181, 27);
+            txtLoyaltyDiscount.TabIndex = 35;
+            // 
+            // txtNetAmount
+            // 
+            txtNetAmount.Location = new Point(913, 231);
+            txtNetAmount.Name = "txtNetAmount";
+            txtNetAmount.Size = new Size(181, 27);
+            txtNetAmount.TabIndex = 36;
+            // 
+            // txtVatAmount
+            // 
+            txtVatAmount.Location = new Point(913, 287);
+            txtVatAmount.Name = "txtVatAmount";
+            txtVatAmount.Size = new Size(181, 27);
+            txtVatAmount.TabIndex = 37;
+            // 
+            // txtChange
+            // 
+            txtChange.Location = new Point(913, 351);
+            txtChange.Name = "txtChange";
+            txtChange.Size = new Size(181, 27);
+            txtChange.TabIndex = 38;
+            // 
+            // txtPointsEarned
+            // 
+            txtPointsEarned.Location = new Point(913, 410);
+            txtPointsEarned.Name = "txtPointsEarned";
+            txtPointsEarned.Size = new Size(181, 27);
+            txtPointsEarned.TabIndex = 39;
+            // 
+            // txtTankStatus
+            // 
+            txtTankStatus.Location = new Point(913, 470);
+            txtTankStatus.Name = "txtTankStatus";
+            txtTankStatus.Size = new Size(181, 27);
+            txtTankStatus.TabIndex = 40;
+            // 
+            // txtTankSpace
+            // 
+            txtTankSpace.Location = new Point(913, 32);
+            txtTankSpace.Name = "txtTankSpace";
+            txtTankSpace.Size = new Size(181, 27);
+            txtTankSpace.TabIndex = 43;
+            // 
+            // txtGrossAmount
+            // 
+            txtGrossAmount.Location = new Point(913, 74);
+            txtGrossAmount.Name = "txtGrossAmount";
+            txtGrossAmount.Size = new Size(181, 27);
+            txtGrossAmount.TabIndex = 44;
+            // 
+            // lblGrossAmount
+            // 
+            lblGrossAmount.AutoSize = true;
+            lblGrossAmount.Location = new Point(799, 77);
+            lblGrossAmount.Name = "lblGrossAmount";
+            lblGrossAmount.Size = new Size(102, 20);
+            lblGrossAmount.TabIndex = 45;
+            lblGrossAmount.Text = "Gross Amount";
+            // 
+            // txtVolDiscount
+            // 
+            txtVolDiscount.Location = new Point(913, 125);
+            txtVolDiscount.Name = "txtVolDiscount";
+            txtVolDiscount.Size = new Size(181, 27);
+            txtVolDiscount.TabIndex = 46;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1125, 757);
+            ClientSize = new Size(1712, 757);
+            Controls.Add(txtVolDiscount);
+            Controls.Add(lblGrossAmount);
+            Controls.Add(txtGrossAmount);
+            Controls.Add(txtTankSpace);
+            Controls.Add(txtTankStatus);
+            Controls.Add(txtPointsEarned);
+            Controls.Add(txtChange);
+            Controls.Add(txtVatAmount);
+            Controls.Add(txtNetAmount);
+            Controls.Add(txtLoyaltyDiscount);
+            Controls.Add(lblTankStatus);
+            Controls.Add(lblPointsEarned);
+            Controls.Add(lblLoyaltyDiscount);
+            Controls.Add(lblNetAmount);
+            Controls.Add(lblVatAmount);
+            Controls.Add(lblChange);
+            Controls.Add(lblVolDiscount);
+            Controls.Add(lblTankSpace);
             Controls.Add(txtCashTendered);
             Controls.Add(lblCashTendered);
             Controls.Add(txtLoyaltyPoints);
@@ -280,5 +463,34 @@
         private Label lblCashTendered;
         private TextBox txtLoyaltyPoints;
         private Label lblLoyaltyPoints;
+        private TextBox textBox1;
+        private TextBox textBox2;
+        private Label lblTankSpace;
+        private Label lblVolDiscount;
+ 
+        private TextBox txtLoyaltyDiscount;
+        private TextBox txtNetAmount;
+        private TextBox txtVatAmount;
+        private TextBox txtChange;
+        private TextBox txtPointsEarned;
+        private TextBox txtTankStatus;
+    
+        private TextBox txtTankSpace;
+        private TextBox txtGrossAmount;
+        private Label lblGrossAmount;
+
+        private TextBox txtVolDiscount;
+
+        private Label lblLoyaltyDiscount;
+
+        private Label lblNetAmount;
+
+        private Label lblVatAmount;
+
+        private Label lblChange;
+
+        private Label lblPointsEarned;
+
+        private Label lblTankStatus;
     }
 }
