@@ -41,7 +41,7 @@
             lblFuelLevel = new Label();
             txtTankCapacity = new TextBox();
             lblTankCapacity = new Label();
-            txtPricePerLiters = new TextBox();
+            txtPricePerLiter = new TextBox();
             lblPricePerLiter = new Label();
             txtLiters = new TextBox();
             lblLiters = new Label();
@@ -76,7 +76,7 @@
             // lblTitle
             // 
             lblTitle.AutoSize = true;
-            lblTitle.Location = new Point(12, 9);
+            lblTitle.Location = new Point(461, 9);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(181, 20);
             lblTitle.TabIndex = 0;
@@ -98,6 +98,7 @@
             txtPumpNo.Name = "txtPumpNo";
             txtPumpNo.Size = new Size(181, 27);
             txtPumpNo.TabIndex = 2;
+            txtPumpNo.TextChanged += txtPumpNo_TextChanged;
             // 
             // txtCustomer
             // 
@@ -105,6 +106,7 @@
             txtCustomer.Name = "txtCustomer";
             txtCustomer.Size = new Size(181, 27);
             txtCustomer.TabIndex = 4;
+            txtCustomer.TextChanged += txtCustomer_TextChanged;
             // 
             // lblCustomer
             // 
@@ -122,6 +124,7 @@
             txtPlateNo.Name = "txtPlateNo";
             txtPlateNo.Size = new Size(181, 27);
             txtPlateNo.TabIndex = 6;
+            txtPlateNo.TextChanged += txtPlateNo_TextChanged;
             // 
             // lblPlateNo
             // 
@@ -139,15 +142,17 @@
             txtFuelType.Name = "txtFuelType";
             txtFuelType.Size = new Size(181, 27);
             txtFuelType.TabIndex = 8;
+            txtFuelType.TextChanged += txtFuelType_TextChanged;
             // 
             // lblFuelType
             // 
             lblFuelType.AutoSize = true;
             lblFuelType.Location = new Point(12, 138);
             lblFuelType.Name = "lblFuelType";
-            lblFuelType.Size = new Size(94, 20);
+            lblFuelType.Size = new Size(71, 20);
             lblFuelType.TabIndex = 7;
-            lblFuelType.Text = "Fuel Number";
+            lblFuelType.Text = "Fuel Type";
+            lblFuelType.Click += lblFuelType_Click;
             // 
             // txtFuelLevel
             // 
@@ -155,6 +160,7 @@
             txtFuelLevel.Name = "txtFuelLevel";
             txtFuelLevel.Size = new Size(181, 27);
             txtFuelLevel.TabIndex = 16;
+            txtFuelLevel.TextChanged += txtFuelLevel_TextChanged;
             // 
             // lblFuelLevel
             // 
@@ -171,6 +177,7 @@
             txtTankCapacity.Name = "txtTankCapacity";
             txtTankCapacity.Size = new Size(181, 27);
             txtTankCapacity.TabIndex = 14;
+            txtTankCapacity.TextChanged += txtTankCapacity_TextChanged;
             // 
             // lblTankCapacity
             // 
@@ -181,12 +188,13 @@
             lblTankCapacity.TabIndex = 13;
             lblTankCapacity.Text = "Tank Capacity (L)";
             // 
-            // txtPricePerLiters
+            // txtPricePerLiter
             // 
-            txtPricePerLiters.Location = new Point(509, 65);
-            txtPricePerLiters.Name = "txtPricePerLiters";
-            txtPricePerLiters.Size = new Size(181, 27);
-            txtPricePerLiters.TabIndex = 12;
+            txtPricePerLiter.Location = new Point(509, 65);
+            txtPricePerLiter.Name = "txtPricePerLiter";
+            txtPricePerLiter.Size = new Size(181, 27);
+            txtPricePerLiter.TabIndex = 12;
+            txtPricePerLiter.TextChanged += txtPricePerLiters_TextChanged;
             // 
             // lblPricePerLiter
             // 
@@ -221,6 +229,7 @@
             txtCashTendered.Name = "txtCashTendered";
             txtCashTendered.Size = new Size(181, 27);
             txtCashTendered.TabIndex = 24;
+            txtCashTendered.TextChanged += txtCashTendered_TextChanged;
             // 
             // lblCashTendered
             // 
@@ -237,6 +246,7 @@
             txtLoyaltyPoints.Name = "txtLoyaltyPoints";
             txtLoyaltyPoints.Size = new Size(181, 27);
             txtLoyaltyPoints.TabIndex = 22;
+            txtLoyaltyPoints.TextChanged += txtLoyaltyPoints_TextChanged;
             // 
             // lblLoyaltyPoints
             // 
@@ -326,57 +336,73 @@
             // 
             txtLoyaltyDiscount.Location = new Point(913, 131);
             txtLoyaltyDiscount.Name = "txtLoyaltyDiscount";
+            txtLoyaltyDiscount.ReadOnly = true;
             txtLoyaltyDiscount.Size = new Size(181, 27);
             txtLoyaltyDiscount.TabIndex = 35;
+            txtLoyaltyDiscount.TextChanged += txtLoyaltyDiscount_TextChanged;
             // 
             // txtNetAmount
             // 
             txtNetAmount.Location = new Point(913, 164);
             txtNetAmount.Name = "txtNetAmount";
+            txtNetAmount.ReadOnly = true;
             txtNetAmount.Size = new Size(181, 27);
             txtNetAmount.TabIndex = 36;
+            txtNetAmount.TextChanged += txtNetAmount_TextChanged;
             // 
             // txtVatAmount
             // 
             txtVatAmount.Location = new Point(913, 197);
             txtVatAmount.Name = "txtVatAmount";
+            txtVatAmount.ReadOnly = true;
             txtVatAmount.Size = new Size(181, 27);
             txtVatAmount.TabIndex = 37;
+            txtVatAmount.TextChanged += txtVatAmount_TextChanged;
             // 
             // txtChange
             // 
             txtChange.Location = new Point(913, 230);
             txtChange.Name = "txtChange";
+            txtChange.ReadOnly = true;
             txtChange.Size = new Size(181, 27);
             txtChange.TabIndex = 38;
+            txtChange.TextChanged += txtChange_TextChanged;
             // 
             // txtPointsEarned
             // 
             txtPointsEarned.Location = new Point(913, 263);
             txtPointsEarned.Name = "txtPointsEarned";
+            txtPointsEarned.ReadOnly = true;
             txtPointsEarned.Size = new Size(181, 27);
             txtPointsEarned.TabIndex = 39;
+            txtPointsEarned.TextChanged += txtPointsEarned_TextChanged;
             // 
             // txtTankStatus
             // 
             txtTankStatus.Location = new Point(913, 296);
             txtTankStatus.Name = "txtTankStatus";
+            txtTankStatus.ReadOnly = true;
             txtTankStatus.Size = new Size(181, 27);
             txtTankStatus.TabIndex = 40;
+            txtTankStatus.TextChanged += txtTankStatus_TextChanged;
             // 
             // txtTankSpace
             // 
             txtTankSpace.Location = new Point(913, 32);
             txtTankSpace.Name = "txtTankSpace";
+            txtTankSpace.ReadOnly = true;
             txtTankSpace.Size = new Size(181, 27);
             txtTankSpace.TabIndex = 43;
+            txtTankSpace.TextChanged += txtTankSpace_TextChanged;
             // 
             // txtGrossAmount
             // 
             txtGrossAmount.Location = new Point(913, 65);
             txtGrossAmount.Name = "txtGrossAmount";
+            txtGrossAmount.ReadOnly = true;
             txtGrossAmount.Size = new Size(181, 27);
             txtGrossAmount.TabIndex = 44;
+            txtGrossAmount.TextChanged += txtGrossAmount_TextChanged;
             // 
             // lblGrossAmount
             // 
@@ -391,8 +417,10 @@
             // 
             txtVolDiscount.Location = new Point(913, 98);
             txtVolDiscount.Name = "txtVolDiscount";
+            txtVolDiscount.ReadOnly = true;
             txtVolDiscount.Size = new Size(181, 27);
             txtVolDiscount.TabIndex = 46;
+            txtVolDiscount.TextChanged += txtVolDiscount_TextChanged;
             // 
             // btnCompute
             // 
@@ -469,7 +497,7 @@
             Controls.Add(lblFuelLevel);
             Controls.Add(txtTankCapacity);
             Controls.Add(lblTankCapacity);
-            Controls.Add(txtPricePerLiters);
+            Controls.Add(txtPricePerLiter);
             Controls.Add(lblPricePerLiter);
             Controls.Add(txtLiters);
             Controls.Add(lblLiters);
@@ -503,7 +531,7 @@
         private Label lblFuelLevel;
         private TextBox txtTankCapacity;
         private Label lblTankCapacity;
-        private TextBox txtPricePerLiters;
+        private TextBox txtPricePerLiter;
         private Label lblPricePerLiter;
         private TextBox txtLiters;
         private Label lblLiters;
