@@ -198,5 +198,55 @@ namespace WinFormsApp2
         private void txtChange_TextChanged(object sender, EventArgs e) { }
         private void txtPointsEarned_TextChanged(object sender, EventArgs e) { }
         private void txtTankStatus_TextChanged(object sender, EventArgs e) { }
+
+        private void lblTankCapacity_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFuelLevel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLoyaltyPoints_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblGrossAmount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNetAmount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblVatAmount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTankStatus_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPumpAndCustomer_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFuelInputs_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
