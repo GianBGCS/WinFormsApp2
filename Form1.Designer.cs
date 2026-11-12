@@ -71,30 +71,37 @@
             btnClear = new Button();
             btnReport = new Button();
             btnExit = new Button();
+            lblPumpAndCustomer = new Label();
+            lblFuelInputs = new Label();
+            lblResults = new Label();
             SuspendLayout();
             // 
             // lblTitle
             // 
             lblTitle.AutoSize = true;
-            lblTitle.Location = new Point(461, 9);
+            lblTitle.Font = new Font("Cambria", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitle.Location = new Point(243, 9);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(181, 20);
+            lblTitle.Size = new Size(309, 30);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "Gas Station Billing System";
+            lblTitle.Click += lblTitle_Click;
             // 
             // lblPumpNo
             // 
             lblPumpNo.AutoSize = true;
-            lblPumpNo.Location = new Point(12, 38);
+            lblPumpNo.Font = new Font("Cambria", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblPumpNo.Location = new Point(36, 98);
             lblPumpNo.Name = "lblPumpNo";
-            lblPumpNo.Size = new Size(105, 20);
+            lblPumpNo.Size = new Size(98, 17);
             lblPumpNo.TabIndex = 1;
             lblPumpNo.Text = "Pump Number";
             lblPumpNo.Click += label1_Click;
             // 
             // txtPumpNo
             // 
-            txtPumpNo.Location = new Point(130, 35);
+            txtPumpNo.BorderStyle = BorderStyle.FixedSingle;
+            txtPumpNo.Location = new Point(147, 93);
             txtPumpNo.Name = "txtPumpNo";
             txtPumpNo.Size = new Size(181, 27);
             txtPumpNo.TabIndex = 2;
@@ -102,7 +109,8 @@
             // 
             // txtCustomer
             // 
-            txtCustomer.Location = new Point(130, 68);
+            txtCustomer.BorderStyle = BorderStyle.FixedSingle;
+            txtCustomer.Location = new Point(147, 147);
             txtCustomer.Name = "txtCustomer";
             txtCustomer.Size = new Size(181, 27);
             txtCustomer.TabIndex = 4;
@@ -111,16 +119,18 @@
             // lblCustomer
             // 
             lblCustomer.AutoSize = true;
-            lblCustomer.Location = new Point(12, 71);
+            lblCustomer.Font = new Font("Cambria", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblCustomer.Location = new Point(33, 152);
             lblCustomer.Name = "lblCustomer";
-            lblCustomer.Size = new Size(116, 20);
+            lblCustomer.Size = new Size(108, 17);
             lblCustomer.TabIndex = 3;
             lblCustomer.Text = "Customer Name";
             lblCustomer.Click += label2_Click;
             // 
             // txtPlateNo
             // 
-            txtPlateNo.Location = new Point(130, 101);
+            txtPlateNo.BorderStyle = BorderStyle.FixedSingle;
+            txtPlateNo.Location = new Point(576, 94);
             txtPlateNo.Name = "txtPlateNo";
             txtPlateNo.Size = new Size(181, 27);
             txtPlateNo.TabIndex = 6;
@@ -129,16 +139,18 @@
             // lblPlateNo
             // 
             lblPlateNo.AutoSize = true;
-            lblPlateNo.Location = new Point(12, 104);
+            lblPlateNo.Font = new Font("Cambria", 9F, FontStyle.Italic);
+            lblPlateNo.Location = new Point(476, 99);
             lblPlateNo.Name = "lblPlateNo";
-            lblPlateNo.Size = new Size(100, 20);
+            lblPlateNo.Size = new Size(94, 17);
             lblPlateNo.TabIndex = 5;
             lblPlateNo.Text = "Plate Number";
             lblPlateNo.Click += label3_Click;
             // 
             // txtFuelType
             // 
-            txtFuelType.Location = new Point(130, 134);
+            txtFuelType.BorderStyle = BorderStyle.FixedSingle;
+            txtFuelType.Location = new Point(576, 149);
             txtFuelType.Name = "txtFuelType";
             txtFuelType.Size = new Size(181, 27);
             txtFuelType.TabIndex = 8;
@@ -147,16 +159,18 @@
             // lblFuelType
             // 
             lblFuelType.AutoSize = true;
-            lblFuelType.Location = new Point(12, 138);
+            lblFuelType.Font = new Font("Cambria", 9F, FontStyle.Italic);
+            lblFuelType.Location = new Point(485, 152);
             lblFuelType.Name = "lblFuelType";
-            lblFuelType.Size = new Size(71, 20);
+            lblFuelType.Size = new Size(69, 17);
             lblFuelType.TabIndex = 7;
             lblFuelType.Text = "Fuel Type";
             lblFuelType.Click += lblFuelType_Click;
             // 
             // txtFuelLevel
             // 
-            txtFuelLevel.Location = new Point(509, 131);
+            txtFuelLevel.BorderStyle = BorderStyle.FixedSingle;
+            txtFuelLevel.Location = new Point(576, 237);
             txtFuelLevel.Name = "txtFuelLevel";
             txtFuelLevel.Size = new Size(181, 27);
             txtFuelLevel.TabIndex = 16;
@@ -165,15 +179,18 @@
             // lblFuelLevel
             // 
             lblFuelLevel.AutoSize = true;
-            lblFuelLevel.Location = new Point(343, 131);
+            lblFuelLevel.Font = new Font("Cambria", 7.20000029F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblFuelLevel.Location = new Point(445, 243);
             lblFuelLevel.Name = "lblFuelLevel";
-            lblFuelLevel.Size = new Size(147, 20);
+            lblFuelLevel.Size = new Size(125, 15);
             lblFuelLevel.TabIndex = 15;
             lblFuelLevel.Text = "Current Fuel Level (L)";
+            lblFuelLevel.Click += lblFuelLevel_Click;
             // 
             // txtTankCapacity
             // 
-            txtTankCapacity.Location = new Point(509, 98);
+            txtTankCapacity.BorderStyle = BorderStyle.FixedSingle;
+            txtTankCapacity.Location = new Point(147, 348);
             txtTankCapacity.Name = "txtTankCapacity";
             txtTankCapacity.Size = new Size(181, 27);
             txtTankCapacity.TabIndex = 14;
@@ -182,15 +199,18 @@
             // lblTankCapacity
             // 
             lblTankCapacity.AutoSize = true;
-            lblTankCapacity.Location = new Point(345, 98);
+            lblTankCapacity.Font = new Font("Cambria", 7.8F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblTankCapacity.Location = new Point(33, 354);
             lblTankCapacity.Name = "lblTankCapacity";
-            lblTankCapacity.Size = new Size(120, 20);
+            lblTankCapacity.Size = new Size(104, 15);
             lblTankCapacity.TabIndex = 13;
             lblTankCapacity.Text = "Tank Capacity (L)";
+            lblTankCapacity.Click += lblTankCapacity_Click;
             // 
             // txtPricePerLiter
             // 
-            txtPricePerLiter.Location = new Point(509, 65);
+            txtPricePerLiter.BorderStyle = BorderStyle.FixedSingle;
+            txtPricePerLiter.Location = new Point(147, 291);
             txtPricePerLiter.Name = "txtPricePerLiter";
             txtPricePerLiter.Size = new Size(181, 27);
             txtPricePerLiter.TabIndex = 12;
@@ -199,16 +219,18 @@
             // lblPricePerLiter
             // 
             lblPricePerLiter.AutoSize = true;
-            lblPricePerLiter.Location = new Point(345, 65);
+            lblPricePerLiter.Font = new Font("Cambria", 9F, FontStyle.Italic);
+            lblPricePerLiter.Location = new Point(36, 295);
             lblPricePerLiter.Name = "lblPricePerLiter";
-            lblPricePerLiter.Size = new Size(100, 20);
+            lblPricePerLiter.Size = new Size(96, 17);
             lblPricePerLiter.TabIndex = 11;
             lblPricePerLiter.Text = "Price per Liter";
             lblPricePerLiter.Click += label3_Click_1;
             // 
             // txtLiters
             // 
-            txtLiters.Location = new Point(509, 32);
+            txtLiters.BorderStyle = BorderStyle.FixedSingle;
+            txtLiters.Location = new Point(147, 237);
             txtLiters.Name = "txtLiters";
             txtLiters.Size = new Size(181, 27);
             txtLiters.TabIndex = 10;
@@ -217,15 +239,17 @@
             // lblLiters
             // 
             lblLiters.AutoSize = true;
-            lblLiters.Location = new Point(345, 35);
+            lblLiters.Font = new Font("Cambria", 9F, FontStyle.Italic);
+            lblLiters.Location = new Point(33, 241);
             lblLiters.Name = "lblLiters";
-            lblLiters.Size = new Size(118, 20);
+            lblLiters.Size = new Size(112, 17);
             lblLiters.TabIndex = 9;
             lblLiters.Text = "Liters Requested";
             // 
             // txtCashTendered
             // 
-            txtCashTendered.Location = new Point(509, 197);
+            txtCashTendered.BorderStyle = BorderStyle.FixedSingle;
+            txtCashTendered.Location = new Point(576, 348);
             txtCashTendered.Name = "txtCashTendered";
             txtCashTendered.Size = new Size(181, 27);
             txtCashTendered.TabIndex = 24;
@@ -234,15 +258,17 @@
             // lblCashTendered
             // 
             lblCashTendered.AutoSize = true;
-            lblCashTendered.Location = new Point(345, 200);
+            lblCashTendered.Font = new Font("Cambria", 9F, FontStyle.Italic);
+            lblCashTendered.Location = new Point(459, 352);
             lblCashTendered.Name = "lblCashTendered";
-            lblCashTendered.Size = new Size(106, 20);
+            lblCashTendered.Size = new Size(100, 17);
             lblCashTendered.TabIndex = 23;
             lblCashTendered.Text = "Cash Tendered";
             // 
             // txtLoyaltyPoints
             // 
-            txtLoyaltyPoints.Location = new Point(509, 164);
+            txtLoyaltyPoints.BorderStyle = BorderStyle.FixedSingle;
+            txtLoyaltyPoints.Location = new Point(576, 291);
             txtLoyaltyPoints.Name = "txtLoyaltyPoints";
             txtLoyaltyPoints.Size = new Size(181, 27);
             txtLoyaltyPoints.TabIndex = 22;
@@ -251,18 +277,21 @@
             // lblLoyaltyPoints
             // 
             lblLoyaltyPoints.AutoSize = true;
-            lblLoyaltyPoints.Location = new Point(345, 167);
+            lblLoyaltyPoints.Font = new Font("Cambria", 9F, FontStyle.Italic);
+            lblLoyaltyPoints.Location = new Point(462, 295);
             lblLoyaltyPoints.Name = "lblLoyaltyPoints";
-            lblLoyaltyPoints.Size = new Size(99, 20);
+            lblLoyaltyPoints.Size = new Size(97, 17);
             lblLoyaltyPoints.TabIndex = 21;
             lblLoyaltyPoints.Text = "Loyalty Points";
+            lblLoyaltyPoints.Click += lblLoyaltyPoints_Click;
             // 
             // lblTankSpace
             // 
             lblTankSpace.AutoSize = true;
-            lblTankSpace.Location = new Point(728, 38);
+            lblTankSpace.Font = new Font("Cambria", 7.8F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblTankSpace.Location = new Point(20, 444);
             lblTankSpace.Name = "lblTankSpace";
-            lblTankSpace.Size = new Size(148, 20);
+            lblTankSpace.Size = new Size(121, 15);
             lblTankSpace.TabIndex = 27;
             lblTankSpace.Text = "Available Tank Space";
             lblTankSpace.Click += label1_Click_1;
@@ -270,18 +299,20 @@
             // lblVolDiscount
             // 
             lblVolDiscount.AutoSize = true;
-            lblVolDiscount.Location = new Point(728, 101);
+            lblVolDiscount.Font = new Font("Cambria", 9F, FontStyle.Italic);
+            lblVolDiscount.Location = new Point(24, 545);
             lblVolDiscount.Name = "lblVolDiscount";
-            lblVolDiscount.Size = new Size(121, 20);
+            lblVolDiscount.Size = new Size(113, 17);
             lblVolDiscount.TabIndex = 28;
             lblVolDiscount.Text = "Volume Discount";
             // 
             // lblChange
             // 
             lblChange.AutoSize = true;
-            lblChange.Location = new Point(728, 236);
+            lblChange.Font = new Font("Cambria", 9F, FontStyle.Italic);
+            lblChange.Location = new Point(485, 493);
             lblChange.Name = "lblChange";
-            lblChange.Size = new Size(59, 20);
+            lblChange.Size = new Size(55, 17);
             lblChange.TabIndex = 29;
             lblChange.Text = "Change";
             lblChange.Click += label3_Click_2;
@@ -289,36 +320,42 @@
             // lblVatAmount
             // 
             lblVatAmount.AutoSize = true;
-            lblVatAmount.Location = new Point(728, 203);
+            lblVatAmount.Font = new Font("Cambria", 9F, FontStyle.Italic);
+            lblVatAmount.Location = new Point(462, 442);
             lblVatAmount.Name = "lblVatAmount";
-            lblVatAmount.Size = new Size(95, 20);
+            lblVatAmount.Size = new Size(90, 17);
             lblVatAmount.TabIndex = 30;
             lblVatAmount.Text = "VAT Included";
+            lblVatAmount.Click += lblVatAmount_Click;
             // 
             // lblNetAmount
             // 
             lblNetAmount.AutoSize = true;
-            lblNetAmount.Location = new Point(725, 170);
+            lblNetAmount.Font = new Font("Cambria", 9F, FontStyle.Italic);
+            lblNetAmount.Location = new Point(19, 651);
             lblNetAmount.Name = "lblNetAmount";
-            lblNetAmount.Size = new Size(121, 20);
+            lblNetAmount.Size = new Size(111, 17);
             lblNetAmount.TabIndex = 31;
             lblNetAmount.Text = "Net Amount Due";
+            lblNetAmount.Click += lblNetAmount_Click;
             // 
             // lblLoyaltyDiscount
             // 
             lblLoyaltyDiscount.AutoSize = true;
-            lblLoyaltyDiscount.Location = new Point(728, 137);
+            lblLoyaltyDiscount.Font = new Font("Cambria", 9F, FontStyle.Italic);
+            lblLoyaltyDiscount.Location = new Point(17, 600);
             lblLoyaltyDiscount.Name = "lblLoyaltyDiscount";
-            lblLoyaltyDiscount.Size = new Size(118, 20);
+            lblLoyaltyDiscount.Size = new Size(113, 17);
             lblLoyaltyDiscount.TabIndex = 32;
             lblLoyaltyDiscount.Text = "Loyalty Discount";
             // 
             // lblPointsEarned
             // 
             lblPointsEarned.AutoSize = true;
-            lblPointsEarned.Location = new Point(725, 269);
+            lblPointsEarned.Font = new Font("Cambria", 9F, FontStyle.Italic);
+            lblPointsEarned.Location = new Point(458, 545);
             lblPointsEarned.Name = "lblPointsEarned";
-            lblPointsEarned.Size = new Size(98, 20);
+            lblPointsEarned.Size = new Size(96, 17);
             lblPointsEarned.TabIndex = 33;
             lblPointsEarned.Text = "Points Earned";
             lblPointsEarned.Click += label7_Click;
@@ -326,15 +363,19 @@
             // lblTankStatus
             // 
             lblTankStatus.AutoSize = true;
-            lblTankStatus.Location = new Point(725, 303);
+            lblTankStatus.Font = new Font("Cambria", 9F, FontStyle.Italic);
+            lblTankStatus.Location = new Point(402, 598);
             lblTankStatus.Name = "lblTankStatus";
-            lblTankStatus.Size = new Size(165, 20);
+            lblTankStatus.Size = new Size(157, 17);
             lblTankStatus.TabIndex = 34;
             lblTankStatus.Text = "Tank Status After Refuel";
+            lblTankStatus.Click += lblTankStatus_Click;
             // 
             // txtLoyaltyDiscount
             // 
-            txtLoyaltyDiscount.Location = new Point(913, 131);
+            txtLoyaltyDiscount.BackColor = SystemColors.Window;
+            txtLoyaltyDiscount.BorderStyle = BorderStyle.FixedSingle;
+            txtLoyaltyDiscount.Location = new Point(147, 594);
             txtLoyaltyDiscount.Name = "txtLoyaltyDiscount";
             txtLoyaltyDiscount.ReadOnly = true;
             txtLoyaltyDiscount.Size = new Size(181, 27);
@@ -343,7 +384,9 @@
             // 
             // txtNetAmount
             // 
-            txtNetAmount.Location = new Point(913, 164);
+            txtNetAmount.BackColor = SystemColors.Window;
+            txtNetAmount.BorderStyle = BorderStyle.FixedSingle;
+            txtNetAmount.Location = new Point(147, 645);
             txtNetAmount.Name = "txtNetAmount";
             txtNetAmount.ReadOnly = true;
             txtNetAmount.Size = new Size(181, 27);
@@ -352,7 +395,9 @@
             // 
             // txtVatAmount
             // 
-            txtVatAmount.Location = new Point(913, 197);
+            txtVatAmount.BackColor = SystemColors.Window;
+            txtVatAmount.BorderStyle = BorderStyle.FixedSingle;
+            txtVatAmount.Location = new Point(576, 438);
             txtVatAmount.Name = "txtVatAmount";
             txtVatAmount.ReadOnly = true;
             txtVatAmount.Size = new Size(181, 27);
@@ -361,7 +406,9 @@
             // 
             // txtChange
             // 
-            txtChange.Location = new Point(913, 230);
+            txtChange.BackColor = SystemColors.Window;
+            txtChange.BorderStyle = BorderStyle.FixedSingle;
+            txtChange.Location = new Point(576, 489);
             txtChange.Name = "txtChange";
             txtChange.ReadOnly = true;
             txtChange.Size = new Size(181, 27);
@@ -370,7 +417,9 @@
             // 
             // txtPointsEarned
             // 
-            txtPointsEarned.Location = new Point(913, 263);
+            txtPointsEarned.BackColor = SystemColors.Window;
+            txtPointsEarned.BorderStyle = BorderStyle.FixedSingle;
+            txtPointsEarned.Location = new Point(576, 541);
             txtPointsEarned.Name = "txtPointsEarned";
             txtPointsEarned.ReadOnly = true;
             txtPointsEarned.Size = new Size(181, 27);
@@ -379,7 +428,9 @@
             // 
             // txtTankStatus
             // 
-            txtTankStatus.Location = new Point(913, 296);
+            txtTankStatus.BackColor = SystemColors.Window;
+            txtTankStatus.BorderStyle = BorderStyle.FixedSingle;
+            txtTankStatus.Location = new Point(576, 594);
             txtTankStatus.Name = "txtTankStatus";
             txtTankStatus.ReadOnly = true;
             txtTankStatus.Size = new Size(181, 27);
@@ -388,7 +439,9 @@
             // 
             // txtTankSpace
             // 
-            txtTankSpace.Location = new Point(913, 32);
+            txtTankSpace.BackColor = SystemColors.Window;
+            txtTankSpace.BorderStyle = BorderStyle.FixedSingle;
+            txtTankSpace.Location = new Point(147, 438);
             txtTankSpace.Name = "txtTankSpace";
             txtTankSpace.ReadOnly = true;
             txtTankSpace.Size = new Size(181, 27);
@@ -397,7 +450,9 @@
             // 
             // txtGrossAmount
             // 
-            txtGrossAmount.Location = new Point(913, 65);
+            txtGrossAmount.BackColor = SystemColors.Window;
+            txtGrossAmount.BorderStyle = BorderStyle.FixedSingle;
+            txtGrossAmount.Location = new Point(147, 489);
             txtGrossAmount.Name = "txtGrossAmount";
             txtGrossAmount.ReadOnly = true;
             txtGrossAmount.Size = new Size(181, 27);
@@ -407,15 +462,19 @@
             // lblGrossAmount
             // 
             lblGrossAmount.AutoSize = true;
-            lblGrossAmount.Location = new Point(728, 71);
+            lblGrossAmount.Font = new Font("Cambria", 9F, FontStyle.Italic);
+            lblGrossAmount.Location = new Point(33, 493);
             lblGrossAmount.Name = "lblGrossAmount";
-            lblGrossAmount.Size = new Size(102, 20);
+            lblGrossAmount.Size = new Size(96, 17);
             lblGrossAmount.TabIndex = 45;
             lblGrossAmount.Text = "Gross Amount";
+            lblGrossAmount.Click += lblGrossAmount_Click;
             // 
             // txtVolDiscount
             // 
-            txtVolDiscount.Location = new Point(913, 98);
+            txtVolDiscount.BackColor = SystemColors.Window;
+            txtVolDiscount.BorderStyle = BorderStyle.FixedSingle;
+            txtVolDiscount.Location = new Point(147, 541);
             txtVolDiscount.Name = "txtVolDiscount";
             txtVolDiscount.ReadOnly = true;
             txtVolDiscount.Size = new Size(181, 27);
@@ -424,9 +483,10 @@
             // 
             // btnCompute
             // 
-            btnCompute.Location = new Point(423, 411);
+            btnCompute.Font = new Font("Cambria", 10.2F, FontStyle.Bold);
+            btnCompute.Location = new Point(832, 121);
             btnCompute.Name = "btnCompute";
-            btnCompute.Size = new Size(287, 29);
+            btnCompute.Size = new Size(219, 49);
             btnCompute.TabIndex = 47;
             btnCompute.Text = "Compute";
             btnCompute.UseVisualStyleBackColor = true;
@@ -434,9 +494,10 @@
             // 
             // btnClear
             // 
-            btnClear.Location = new Point(423, 446);
+            btnClear.Font = new Font("Cambria", 10.2F, FontStyle.Bold);
+            btnClear.Location = new Point(832, 529);
             btnClear.Name = "btnClear";
-            btnClear.Size = new Size(287, 29);
+            btnClear.Size = new Size(219, 49);
             btnClear.TabIndex = 48;
             btnClear.Text = "Clear";
             btnClear.UseVisualStyleBackColor = true;
@@ -444,9 +505,10 @@
             // 
             // btnReport
             // 
-            btnReport.Location = new Point(423, 481);
+            btnReport.Font = new Font("Cambria", 10.2F, FontStyle.Bold);
+            btnReport.Location = new Point(832, 247);
             btnReport.Name = "btnReport";
-            btnReport.Size = new Size(287, 29);
+            btnReport.Size = new Size(219, 49);
             btnReport.TabIndex = 49;
             btnReport.Text = "View Receipt";
             btnReport.UseVisualStyleBackColor = true;
@@ -454,19 +516,55 @@
             // 
             // btnExit
             // 
-            btnExit.Location = new Point(423, 516);
+            btnExit.Font = new Font("Cambria", 10.2F, FontStyle.Bold);
+            btnExit.Location = new Point(832, 383);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(287, 29);
+            btnExit.Size = new Size(219, 49);
             btnExit.TabIndex = 50;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = true;
             btnExit.Click += btnExit_Click;
             // 
+            // lblPumpAndCustomer
+            // 
+            lblPumpAndCustomer.AutoSize = true;
+            lblPumpAndCustomer.Font = new Font("Cambria", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPumpAndCustomer.Location = new Point(16, 50);
+            lblPumpAndCustomer.Name = "lblPumpAndCustomer";
+            lblPumpAndCustomer.Size = new Size(310, 23);
+            lblPumpAndCustomer.TabIndex = 52;
+            lblPumpAndCustomer.Text = "Pump and Customer Information";
+            lblPumpAndCustomer.Click += txtPumpAndCustomer_Click;
+            // 
+            // lblFuelInputs
+            // 
+            lblFuelInputs.AutoSize = true;
+            lblFuelInputs.Font = new Font("Cambria", 12F, FontStyle.Bold);
+            lblFuelInputs.Location = new Point(16, 191);
+            lblFuelInputs.Name = "lblFuelInputs";
+            lblFuelInputs.Size = new Size(113, 23);
+            lblFuelInputs.TabIndex = 53;
+            lblFuelInputs.Text = "Fuel Inputs";
+            lblFuelInputs.Click += lblFuelInputs_Click;
+            // 
+            // lblResults
+            // 
+            lblResults.AutoSize = true;
+            lblResults.Font = new Font("Cambria", 12F, FontStyle.Bold);
+            lblResults.Location = new Point(20, 399);
+            lblResults.Name = "lblResults";
+            lblResults.Size = new Size(77, 23);
+            lblResults.TabIndex = 54;
+            lblResults.Text = "Results";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1131, 576);
+            ClientSize = new Size(1082, 677);
+            Controls.Add(lblResults);
+            Controls.Add(lblFuelInputs);
+            Controls.Add(lblPumpAndCustomer);
             Controls.Add(btnExit);
             Controls.Add(btnReport);
             Controls.Add(btnClear);
@@ -510,6 +608,7 @@
             Controls.Add(txtPumpNo);
             Controls.Add(lblPumpNo);
             Controls.Add(lblTitle);
+            DoubleBuffered = true;
             Name = "Form1";
             Load += Form1_Load;
             ResumeLayout(false);
@@ -539,7 +638,6 @@
         private Label lblCashTendered;
         private TextBox txtLoyaltyPoints;
         private Label lblLoyaltyPoints;
-        private TextBox textBox1;
         private TextBox textBox2;
         private Label lblTankSpace;
         private Label lblVolDiscount;
@@ -572,5 +670,10 @@
         private Button btnClear;
         private Button btnReport;
         private Button btnExit;
+        private Label lblPumpAndCustomer;
+        private Label lblFuelInputs;
+        private Label lblResults;
+
+        
     }
 }
